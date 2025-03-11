@@ -110,43 +110,65 @@ header nav a:hover {
     position: relative;
 }
 
-/* Анімація тексту слогана */
+/* Оновлений стиль слогану */
 .hero h1 {
-    font-size: 5vw;
-    color: white;
+    font-size: 7.5vw; /* Збільшуємо загальний розмір шрифту */
+    max-width: 50%;
+    line-height: 1.1;
     text-transform: uppercase;
     font-weight: bold;
-    max-width: 50%;
-    word-break: break-word;
-    line-height: 1.2;
     margin: 0;
     opacity: 0;
+    color: white; /* Основний колір - білий */
     animation: fade-in 1.5s ease-out 0.5s forwards;
+    position: relative;
+    top: -30px; /* Ще трохи піднімаємо вище */
 }
 
-/* Стиль для кнопки */
+/* Розбиття на рядки */
+.hero h1 span {
+    display: block; /* Кожен елемент на новий рядок */
+}
+
+/* Окремий стиль для "Сьогодні" */
+.hero h1 .today {
+    font-size: 8.5vw; /* Робимо ще більшим */
+    color: #ff6347; /* Оранжевий колір */
+    font-weight: bold;
+}
+
+
+/* Оновлений стиль для кнопки "Розпочати" */
 .start-button {
     display: inline-block;
     padding: 15px 30px;
     background-color: #1c9999; /* Колір фону кнопки */
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.3vw; /* Трохи менший шрифт */
     text-decoration: none;
     font-weight: bold;
     text-align: center;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: absolute; /* Використовуємо абсолютне позиціювання */
-    left: 45%; /* Відстань від лівого краю */
-    top: 65%; /* Розташовуємо по вертикалі по центру */
-    transform: translateY(-50%); /* Центруємо по вертикалі */
+    position: absolute;
+    left: 20%; /* Трохи ближче до лівого краю */
+    top: 125%;
+    transform: translateY(-50%);
+    border-radius: 10px; /* Максимальне заокруглення */
 }
 
-/* Зміна кольору фону при наведенні */
+/* Зміна кольору при наведенні */
 .start-button:hover {
-    background-color: #178888; /* Темніший відтінок для ефекту наведеня */
+    background-color: #178888;
 }
+
+/* Оновлений розмір слогану */
+.hero h1 {
+    font-size: 4vw; /* Зменшений розмір */
+    max-width: 45%;
+}
+
 
 /* Основний контент */
 .container {
@@ -186,10 +208,12 @@ h2 {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Робить всі зображення однаковими по ширині картки */
+    height: 290px; /* Фіксована висота для всіх */
+    object-fit: cover; /* Обрізає зайве без спотворення */
+    border-radius: 10px; /* Заокруглення кутів, якщо потрібно */
 }
+
 
 .card h3 {
     margin-top: 1vw;
