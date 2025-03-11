@@ -486,45 +486,120 @@ footer {
     }
 }
 
-/* Адаптація для планшетів */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 6vw;
-    }
-
-    .hero-image {
-        width: 40%;
-    }
-
-    header nav a {
-        font-size: 1.5vw;
-    }
-}
-
 /* Адаптація для смартфонів */
 @media (max-width: 768px) {
-    .hero {
-        height: 60vh;
+    /* Хедер */
+    header {
+        height: 7vh;
+        padding: 1vw 3vw;
     }
 
-    .hero h1 {
-        font-size: 8vw;
-        max-width: 100%;
-    }
-
-    .hero-image {
-        display: none;
-    }
-
-    .card {
-        padding: 4vw;
+    .logo img {
+        width: 28vw;
+        max-width: 100px;
     }
 
     header nav a {
-        font-size: 3vw;
+        font-size: 2.8vw;
+        padding: 1vw 2.2vw;
     }
 
+     /* Перша сторінка (герой) */
+     .hero {
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центруємо по горизонталі */
+        justify-content: center; /* Центруємо по вертикалі */
+        text-align: center; /* Текст теж по центру */
+        background-color: rgba(129, 129, 129, 0.199);
+        padding: 20px;
+        position: relative;
+        border-radius: 0 0 30px 30px; /* Менше заокруглення */
+    }
+
+    .hero::before {
+        display: none; /* Прибираємо картинку */
+    }
+
+    .hero-overlay {
+        display: none; /* Прибираємо напівпрозорий шар */
+    }
+
+    .hero h1 {
+        font-size: 56px; /* Збільшений шрифт */
+        max-width: 90%;
+        text-align: center; /* Вирівнюємо по центру */
+        margin: 0 auto; /* Центрування */
+        position: absolute;
+        top: 35%; /* Фіксоване положення по вертикалі */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-image {
+        display: none; /* Прибираємо зображення */
+    }
+
+    /* Кнопка "Розпочати" */
+    .start-button {
+        display: inline-block;
+        font-size: 20px; /* Точний розмір шрифту */
+        padding: 12px 24px;
+        background-color: #1c9999;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        left: 140px; /* Точний відступ правіше */
+        margin-top: 200px;
+    }
+
+    /* Заголовки "Тренування", "Мій прогрес", "Раціон" */
+    .section-title {
+        font-size: 6vw;
+        text-align: right;
+        margin-bottom: 3vw;
+    }
+
+    /* Блок "Мій прогрес" */
+    .progress-statistics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .progress-statistics .stat-card:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 75%;
+    }
+
+    .stat-card h3 {
+        font-size: 4.5vw;
+    }
+
+    .stat-card p {
+        font-size: 5vw;
+    }
+
+    /* Текст "Тренування 45 хв" трохи більший */
+    .training-progress .stat-card p {
+        font-size: 5.7vw;
+    }
+
+    /* Кнопки вибору тренування */
+    .select-button {
+        font-size: 3.5vw;
+        padding: 2.5vw 4vw;
+    }
+
+    /* Футер */
     footer {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        padding: 3vw;
     }
 }
