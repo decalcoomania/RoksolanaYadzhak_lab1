@@ -1,0 +1,293 @@
+/* Основні стилі */
+body {
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+/* Хедер */
+header {
+    background-color: #c9c9c9;
+    color: white;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fade-in 1.2s ease-out forwards;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Кнопки навігації */
+header nav {
+    display: flex;
+    gap: 2vw;
+}
+
+header nav a {
+    font-size: 1vw;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Зміна кольору фону при наведенні */
+header nav a:hover {
+    background-color: #aaaaaa; /* Темніший відтінок для ефекту наведеня */
+    transform: scale(1.1);
+}
+/* Стиль для лого */
+.logo {
+    width: 40%; /* Зменшує ширину лого до 50% від доступної ширини контейнера */
+    max-width: 130px; /* Максимальний розмір лого */
+    height: auto; /* Зберігає пропорції */
+}
+
+
+/* Герой-секція */
+.hero {
+    position: relative;
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 135px 135px; /* Верхні кути прямі, нижні заокруглені */
+    margin-top: 68px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url("port.png") no-repeat center center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%) scale(1.2) translateY(5px); /* Легке зміщення вгору */
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(129, 129, 129, 0.199); /* Напівпрозорий сірий фон */
+    z-index: 0; /* Забезпечує, щоб цей шар був поверх картинки, але під текстом */
+}
+
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5vw;
+    position: relative;
+}
+
+/* Анімація тексту слогана */
+.hero h1 {
+    font-size: 5vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 50%;
+    word-break: break-word;
+    line-height: 1.2;
+    margin: 0;
+    opacity: 0;
+    animation: fade-in 1.5s ease-out 0.5s forwards;
+}
+
+/* Стиль для кнопки */
+.start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1c9999; /* Колір фону кнопки */
+    color: white;
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Використовуємо абсолютне позиціювання */
+    left: 45%; /* Відстань від лівого краю */
+    top: 65%; /* Розташовуємо по вертикалі по центру */
+    transform: translateY(-50%); /* Центруємо по вертикалі */
+}
+
+/* Зміна кольору фону при наведенні */
+.start-button:hover {
+    background-color: #178888; /* Темніший відтінок для ефекту наведеня */
+}
+
+/* Основний контент */
+.container {
+    padding: 2vw;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+/* Заголовки */
+h2 {
+    text-align: center;
+    color: #1c9999; /* Той самий колір, як у кнопки "Розпочати" */
+    font-size: 3vw;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoom-in 1s ease-out 0.5s forwards;
+}
+
+/* Карточки */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5vw;
+    margin-top: 5vw;
+}
+
+.card {
+    background: #fff;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slide-up 1s ease-out 0.7s forwards;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 1vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #1c9999;
+}
+
+/* Футер */
+footer {
+    background-color: #c9c9c9; /* Такий самий колір, як у хедера */
+    color: white;
+    text-align: center;
+    padding: 1.5vw;
+    margin-top: 5vw;
+    font-size: 1.2vw;
+}
+
+/* Анімації */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes background-shift {
+    0% {
+        background: linear-gradient(90deg, #ffbdc0, #ffffff);
+    }
+    100% {
+        background: linear-gradient(90deg, #ffffff, #ffbdc0);
+    }
+}
+
+/* Адаптація для планшетів */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 6vw;
+    }
+
+    .hero-image {
+        width: 40%;
+    }
+
+    header nav a {
+        font-size: 1.5vw;
+    }
+}
+
+/* Адаптація для смартфонів */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 8vw;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .card {
+        padding: 4vw;
+    }
+
+    header nav a {
+        font-size: 3vw;
+    }
+
+    footer {
+        font-size: 3vw;
+    }
+}
