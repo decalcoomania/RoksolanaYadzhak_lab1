@@ -152,16 +152,13 @@ header nav a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: absolute;
-    left: 20%; /* Трохи ближче до лівого краю */
+    left: 1%; /* Трохи ближче до лівого краю */
     top: 125%;
     transform: translateY(-50%);
     border-radius: 10px; /* Максимальне заокруглення */
 }
 
-/* Зміна кольору при наведенні */
-.start-button:hover {
-    background-color: #178888;
-}
+
 
 /* Оновлений розмір слогану */
 .hero h1 {
@@ -202,10 +199,29 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     opacity: 0;
     transform: translateY(30px);
     animation: slide-up 1s ease-out 0.7s forwards;
 }
+
+.card .select-button {
+    margin-top: auto; /* Переміщає кнопку в кінець картки */
+    padding: 10px 20px;
+    background-color: #1c9999; /* Колір кнопки */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card .select-button:hover {
+    background-color: #178888;
+}
+
 
 .card img {
     width: 100%; /* Робить всі зображення однаковими по ширині картки */
@@ -214,9 +230,18 @@ h2 {
     border-radius: 10px; /* Заокруглення кутів, якщо потрібно */
 }
 
+.card p {
+    margin-top: 1vw; /* Додаємо відступ між заголовком та описом */
+    
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    font-weight: normal;
+    color: #555;
+    align-self: center; /* Центрує текст тривалості */
+}
 
 .card h3 {
-    margin-top: 1vw;
+    margin-top: 2vw;
     font-size: 2.5vw;
     font-weight: bold;
     color: #1c9999;
