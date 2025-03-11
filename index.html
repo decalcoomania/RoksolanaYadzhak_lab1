@@ -62,17 +62,84 @@
             </section>
             
             
-            <!-- Розділ Прогрес -->
-            <section id="progress">
+            <section class="progress">
                 <h2>Мій прогрес</h2>
-                <p>Статистика вашої фізичної активності з’явиться тут.</p>
+                <div class="progress-statistics">
+                    <div class="stat-card">
+                        <h3>Кроки</h3>
+                        <p>12000 кроків</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Пройдено</h3>
+                        <p>8 км</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Калорії</h3>
+                        <p>350 калорій</p>
+                    </div>
+                </div>
+                <div class="training-progress">
+                    <h3>Прогрес в тренуваннях</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
             </section>
+            
 
-            <!-- Розділ Раціон -->
-            <section id="nutrition">
+            <section id="nutrition-section" class="nutrition">
                 <h2>Раціон</h2>
-                <p>Тут ви зможете планувати своє харчування.</p>
+                <div class="meal-planner">
+                    <div class="meal-header">
+                        <input type="radio" id="monday" name="day" checked>
+                        <label for="monday">Понеділок</label>
+                        <input type="radio" id="tuesday" name="day">
+                        <label for="tuesday">Вівторок</label>
+                        <input type="radio" id="wednesday" name="day">
+                        <label for="wednesday">Середа</label>
+                        <input type="radio" id="thursday" name="day">
+                        <label for="thursday">Четвер</label>
+                        <input type="radio" id="friday" name="day">
+                        <label for="friday">П'ятниця</label>
+                        <input type="radio" id="saturday" name="day">
+                        <label for="saturday">Субота</label>
+                        <input type="radio" id="sunday" name="day">
+                        <label for="sunday">Неділя</label>
+                    </div>
+            
+                    <div class="meal-content">
+                        <div class="meal-day" id="monday-content">
+                            <h3>Понеділок</h3>
+                            <ul class="meal-list">
+                                <li>Сніданок: Овсянка з ягодами - 300 калорій</li>
+                                <li>Обід: Курка з овочами - 500 калорій</li>
+                                <li>Вечеря: Риба з салатом - 400 калорій</li>
+                            </ul>
+                        </div>
+                        <div class="meal-day" id="tuesday-content">
+                            <h3>Вівторок</h3>
+                            <ul class="meal-list">
+                                <li>Сніданок: Яєчня з помідорами - 250 калорій</li>
+                                <li>Обід: Салат з тунцем - 450 калорій</li>
+                                <li>Вечеря: Овочевий рагу - 350 калорій</li>
+                            </ul>
+                        </div>
+                        <div class="meal-day" id="wednesday-content">
+                            <h3>Середа</h3>
+                            <ul class="meal-list">
+                                <li>Сніданок: Сирники з медом - 400 калорій</li>
+                                <li>Обід: Суп з куркою - 350 калорій</li>
+                                <li>Вечеря: Стейк з овочами - 500 калорій</li>
+                            </ul>
+                        </div>
+                        <!-- Додати інші дні тут -->
+                    </div>
+                </div>
             </section>
+            
+            
+            
+            
         </main>
     </div>
 
