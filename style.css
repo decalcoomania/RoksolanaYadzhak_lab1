@@ -554,13 +554,13 @@ footer {
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        left: 140px; /* Точний відступ правіше */
+        left: 120px; /* Точний відступ правіше */
         margin-top: 200px;
     }
 
     /* Заголовки "Тренування", "Мій прогрес", "Раціон" */
     .section-title {
-        font-size: 6vw;
+        font-size: 100vw;
         text-align: right;
         margin-bottom: 3vw;
     }
@@ -588,7 +588,7 @@ footer {
 
     /* Текст "Тренування 45 хв" трохи більший */
     .training-progress .stat-card p {
-        font-size: 5.7vw;
+        font-size: 9.7vw;
     }
 
     /* Кнопки вибору тренування */
