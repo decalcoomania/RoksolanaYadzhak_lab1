@@ -554,7 +554,7 @@ footer {
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        left: 100px; /* Точний відступ правіше */
+        left: 85px; /* Точний відступ правіше */
         margin-top: 200px;
     }
 
