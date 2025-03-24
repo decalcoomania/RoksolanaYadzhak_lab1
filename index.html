@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@400;500;600&family=Tiny5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -18,148 +20,25 @@
                 <span>крок до здоров'я</span>
                 <span class="today">Сьогодні</span>
             </h1>
-            
-            <a href="#trainings" class="start-button">Розпочати</a> <!-- Кнопка -->
+
+            <a href="trainings.html" class="start-button">Розпочати</a>
         </div>
     </section>
-    
 
     <header>
         <div class="header-container">
             <img src="logo.png" alt="Лого" class="logo">
             <nav>
-                <a href="#trainings">Тренування</a>
-                <a href="#progress">Мій прогрес</a>
-                <a href="#nutrition">Раціон</a>
+                <a href="trainings.html">Тренування</a>
+                <a href="progress.html">Мій прогрес</a>
+                <a href="nutrition.html">Раціон</a>
             </nav>
         </div>
     </header>
-    
 
-    <!-- Основний контент -->
-    <div class="container">
-        <main>
-            <!-- Розділ Тренування -->
-            <section id="trainings">
-                <h2>Тренування</h2>
-                <div class="grid">
-                    <!-- Картка 1: Кардіо -->
-                    <div class="card cardio">
-                        <img src="cardio1.jpg" alt="Кардіо тренування">
-                        <h3>Кардіо тренування</h3>
-                        <p>Тривалість: 30 хв</p>
-                        <a href="#" class="select-button">Вибрати тренування</a>
-                    </div>
-
-                    <!-- Картка 2: Силові вправи -->
-                    <div class="card strength">
-                        <img src="gym1.jpg" alt="Силові тренування">
-                        <h3>Силові тренування</h3>
-                        <p>Тривалість: 45 хв</p>
-                        <a href="#" class="select-button">Вибрати тренування</a>
-                    </div>
-
-                    <!-- Картка 3: Розтяжка -->
-                    <div class="card stretching">
-                        <img src="zastavka.jpg" alt="Розтяжка">
-                        <h3>Зміцнення гнучкості</h3>
-                        <p>Тривалість: 20 хв</p>
-                        <a href="#" class="select-button">Вибрати тренування</a>
-                    </div>
-
-                </div>
-            </section>
-            
-            
-            <section class="progress">
-                <h2>Мій прогрес</h2>
-                <div class="progress-statistics">
-                    <!-- Картка 1: Виконано вправ -->
-                    <div class="stat-card">
-                        <h3>Виконано вправ</h3>
-                        <p>15 вправ</p>
-                    </div>
-                    <!-- Картка 2: Спалено калорій -->
-                    <div class="stat-card">
-                        <h3>Спалено калорій</h3>
-                        <p>350 калорій</p>
-                    </div>
-                    <!-- Картка 3: Час тренувань -->
-                    <div class="stat-card">
-                        <h3>Час тренувань</h3>
-                        <p>1 година 30 хв</p>
-                    </div>
-                </div>
-                <!-- Прогрес у тренуваннях -->
-                <div class="training-progress">
-                    <h3>Прогрес в тренуваннях</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </section>
-            
-            
-
-            <section id="nutrition-section" class="nutrition">
-                <h2>Раціон</h2>
-                <div class="meal-planner">
-                    <div class="meal-header">
-                        <input type="radio" id="monday" name="day" checked>
-                        <label for="monday">Понеділок</label>
-                        <input type="radio" id="tuesday" name="day">
-                        <label for="tuesday">Вівторок</label>
-                        <input type="radio" id="wednesday" name="day">
-                        <label for="wednesday">Середа</label>
-                        <input type="radio" id="thursday" name="day">
-                        <label for="thursday">Четвер</label>
-                        <input type="radio" id="friday" name="day">
-                        <label for="friday">П'ятниця</label>
-                        <input type="radio" id="saturday" name="day">
-                        <label for="saturday">Субота</label>
-                        <input type="radio" id="sunday" name="day">
-                        <label for="sunday">Неділя</label>
-                    </div>
-            
-                    <div class="meal-content">
-                        <div class="meal-day" id="monday-content">
-                            <h3>Понеділок</h3>
-                            <ul class="meal-list">
-                                <li>Сніданок: Овсянка з ягодами - 300 калорій</li>
-                                <li>Обід: Курка з овочами - 500 калорій</li>
-                                <li>Вечеря: Риба з салатом - 400 калорій</li>
-                            </ul>
-                        </div>
-                        <div class="meal-day" id="tuesday-content">
-                            <h3>Вівторок</h3>
-                            <ul class="meal-list">
-                                <li>Сніданок: Яєчня з помідорами - 250 калорій</li>
-                                <li>Обід: Салат з тунцем - 450 калорій</li>
-                                <li>Вечеря: Овочевий рагу - 350 калорій</li>
-                            </ul>
-                        </div>
-                        <div class="meal-day" id="wednesday-content">
-                            <h3>Середа</h3>
-                            <ul class="meal-list">
-                                <li>Сніданок: Сирники з медом - 400 калорій</li>
-                                <li>Обід: Суп з куркою - 350 калорій</li>
-                                <li>Вечеря: Стейк з овочами - 500 калорій</li>
-                            </ul>
-                        </div>
-                        <!-- Додати інші дні тут -->
-                    </div>
-                </div>
-            </section>
-            
-            
-            
-            
-        </main>
-    </div>
-
-    <!-- Футер -->
     <footer>
         <p>Contacts: roksolana.yadzhak.oi.2023@lpnu.ua | Phone: +380 68 636 54 27</p>
     </footer>
 </body>
+
 </html>
