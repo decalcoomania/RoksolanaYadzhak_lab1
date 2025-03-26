@@ -1,0 +1,84 @@
+/* Карточки */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Зменшена мінімальна ширина картки */
+    gap: 3vw; /* Відстань між картками */
+    margin-top: 2vw; /* Трохи зменшений відступ зверху */
+}
+
+#trainings {
+    padding-bottom: 50px; /* Місце для журналу тренувань */
+}
+
+/* Зменшення розмірів карток */
+.card {
+    background: #fff;
+    padding: 1.5vw; /* Зменшений padding */
+    border-radius: 8px; /* Зменшені округлі кути */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Менша тінь */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slide-up 1s ease-out 0.7s forwards;
+    max-width: 280px; /* Максимальна ширина картки */
+    margin: 0 auto; /* Центрування карток по горизонталі */
+}
+
+.card .select-button {
+    margin-top: auto; /* Переміщає кнопку в кінець картки */
+    padding: 8px 18px; /* Менший розмір кнопки */
+    background-color: #1c9999; /* Колір кнопки */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card .select-button:hover {
+    background-color: #178888;
+}
+
+.card img {
+    width: 100%; /* Робить всі зображення однаковими по ширині картки */
+    height: 240px; /* Зменшена висота */
+    object-fit: cover; /* Обрізає зайве без спотворення */
+    border-radius: 8px; /* Заокруглення кутів */
+}
+
+.card p {
+    margin-top: 1vw; /* Відступ між заголовком та описом */
+    font-size: 1.2vw; /* Зменшено розмір шрифту */
+    margin: 1vw 0;
+    font-weight: normal;
+    color: #555;
+    align-self: center; /* Центрує текст тривалості */
+}
+
+.card h3 {
+    margin-top: 1.5vw; /* Зменшений відступ */
+    font-size: 2.2vw; /* Зменшено розмір шрифту */
+    font-weight: bold;
+    color: #1c9999;
+}
+
+/* Стилі для кнопки "Вибрати тренування" */
+.select-button {
+    display: inline-block;
+    padding: 8px 18px; /* Менший розмір кнопки */
+    background-color: #ff6347; /* Колір кнопки */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.select-button:hover {
+    background-color: #ff4500; /* Трохи темніший відтінок при наведенні */
+}

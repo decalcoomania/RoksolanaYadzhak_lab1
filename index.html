@@ -5,26 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моніторинг здоров'я</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@400;500;600&family=Tiny5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>
-                <span>Зроби перший</span>
-                <span>крок до здоров'я</span>
-                <span class="today">Сьогодні</span>
-            </h1>
-
-            <a href="trainings.html" class="start-button">Розпочати</a>
-        </div>
-    </section>
-
     <header>
         <div class="header-container">
             <img src="logo.png" alt="Лого" class="logo">
@@ -32,13 +17,73 @@
                 <a href="trainings.html">Тренування</a>
                 <a href="progress.html">Мій прогрес</a>
                 <a href="nutrition.html">Раціон</a>
+                <div class="profile-menu">
+                    <button id="profile-button" class="nav-button">Мій профіль ▼</button>
+                    <div class="dropdown-content" id="profile-dropdown">
+                        <a href="profile.html">Переглянути профіль</a>
+                        <a href="javascript:void(0)" onclick="logout()">Вийти</a>
+                    </div>
+                </div>
             </nav>
+            <a href="profile.html" id="profile-icon" class="profile-icon" style="display: none;">
+            </a>
         </div>
     </header>
 
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1><span>Зроби перший</span><span>крок до здоров'я</span><span class="today">Сьогодні</span></h1>
+            <a href="javascript:void(0)" class="start-button" onclick="openModal('authModal')">Розпочати</a>
+        </div>
+    </section>
+
+    <!-- Модальні вікна для реєстрації та входу -->
+    <div id="authModal" class="modal">
+        <div class="modal-content centered">
+            <span class="close" onclick="closeModal('authModal')">&times;</span>
+            <h2>Ласкаво просимо!</h2>
+            <button onclick="switchModal('authModal', 'registerModal')">Зареєструватися</button>
+            <button onclick="switchModal('authModal', 'loginModal')">Увійти</button>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content centered">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Реєстрація</h2>
+            <form id="registerForm">
+                <label for="fullname">Ім'я та прізвище:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="new-username">Логін:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Пароль:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content centered">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Вхід</h2>
+            <form id="loginForm">
+                <label for="username">Логін:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Увійти</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
-        <p>Contacts: roksolana.yadzhak.oi.2023@lpnu.ua | Phone: +380 68 636 54 27</p>
+        <p>Contacts: example@email.com | Phone: +380 68 636 54 27</p>
     </footer>
+    
 </body>
 
 </html>

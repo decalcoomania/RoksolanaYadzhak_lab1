@@ -1,0 +1,112 @@
+/* Стиль для профілю */
+/* Стилі для випадаючого меню профілю */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+    text-align: left;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f1f1;
+}
+
+/* Профільне фото у випадаючому меню */
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown-header .user-info {
+    font-size: 14px;
+}
+
+/* Профільна сторінка */
+.profile-page {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-page img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-page h2 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.profile-page p {
+    margin: 5px 0;
+    color: #555;
+}
+/* Контейнер профілю як кнопка */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* При наведенні ефект як у кнопок */
+.profile-container:hover {
+    background-color: #aaaaaa; /* Темніший відтінок */
+    transform: scale(1.1);
+}
+
+/* Іконка профілю */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Додатково можна застосувати масштабування до іконки */
+.profile-container:hover .profile-icon {
+    transform: scale(1.1);
+}
+
+/*закінчуються профільні настрйоки*/

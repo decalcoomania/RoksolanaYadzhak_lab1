@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Раціон</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nutrition.css">
 </head>
 
 <body>
@@ -25,31 +26,178 @@
             <h2>Раціон</h2>
             <div class="meal-planner">
                 <div class="meal-header">
-                    <input type="radio" id="monday" name="day" checked>
-                    <label for="monday">Понеділок</label>
-                    <input type="radio" id="tuesday" name="day">
-                    <label for="tuesday">Вівторок</label>
-                    <input type="radio" id="wednesday" name="day">
-                    <label for="wednesday">Середа</label>
-                    <input type="radio" id="thursday" name="day">
-                    <label for="thursday">Четвер</label>
-                    <input type="radio" id="friday" name="day">
-                    <label for="friday">П'ятниця</label>
-                    <input type="radio" id="saturday" name="day">
-                    <label for="saturday">Субота</label>
-                    <input type="radio" id="sunday" name="day">
-                    <label for="sunday">Неділя</label>
-                </div>
-
-                <div class="meal-content">
-                    <div class="meal-day" id="monday-content">
-                        <h3>Понеділок</h3>
-                        <ul class="meal-list">
-                            <li>Сніданок: Овсянка з ягодами - 300 калорій</li>
-                            <li>Обід: Курка з овочами - 500 калорій</li>
-                            <li>Вечеря: Риба з салатом - 400 калорій</li>
-                        </ul>
+                    <button class="arrow-button" id="prev-day">&#8592;</button> <!-- Ліва стрілка -->
+                    <div class="meal-days">
+                        <div class="meal-day" id="monday">
+                            <h3>Понеділок</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Овсянка з ягодами - 300 калорій</li>
+                                    <li>Яйця з помідорами - 200 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Курка з овочами - 500 калорій</li>
+                                    <li>Рис - 150 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Риба з салатом - 400 калорій</li>
+                                    <li>Тост з авокадо - 250 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="tuesday">
+                            <h3>Вівторок</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Гречка з молоком - 250 калорій</li>
+                                    <li>Сирники - 350 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Борщ з пампушками - 400 калорій</li>
+                                    <li>Хліб - 100 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Салат з тунцем - 350 калорій</li>
+                                    <li>Часникові грінки - 200 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="wednesday">
+                            <h3>Середа</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Тост з авокадо - 250 калорій</li>
+                                    <li>Кава з молоком - 100 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Гречана каша з куркою - 450 калорій</li>
+                                    <li>Салат з огірками - 100 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Томати з моцарелою - 300 калорій</li>
+                                    <li>Риба на пару - 350 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="thursday">
+                            <h3>Четвер</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Панкейки з медом - 300 калорій</li>
+                                    <li>Кава з молоком - 100 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Паста з соусом песто - 500 калорій</li>
+                                    <li>Салат з оливками - 200 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Овочі на грилі - 250 калорій</li>
+                                    <li>Курка запечена - 350 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="friday">
+                            <h3>П'ятниця</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Мюслі з йогуртом - 350 калорій</li>
+                                    <li>Яйця пашот - 200 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Курячий суп - 400 калорій</li>
+                                    <li>Булочка - 150 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Салат з авокадо та тунцем - 350 калорій</li>
+                                    <li>Часникові грінки - 150 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="saturday">
+                            <h3>Субота</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Блінчики з ягодами - 350 калорій</li>
+                                    <li>Чай з лимоном - 50 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Лазанья з м'ясом - 600 калорій</li>
+                                    <li>Овочі запечені - 200 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Риба з картоплею - 450 калорій</li>
+                                    <li>Салат з капустою - 150 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="meal-day" id="sunday">
+                            <h3>Неділя</h3>
+                            <div class="meal">
+                                <h4>Сніданок</h4>
+                                <ul>
+                                    <li>Тост з авокадо і яйцем - 300 калорій</li>
+                                    <li>Фреш з апельсина - 100 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Обід</h4>
+                                <ul>
+                                    <li>Гречка з куркою - 450 калорій</li>
+                                    <li>Салат з оливками - 200 калорій</li>
+                                </ul>
+                            </div>
+                            <div class="meal">
+                                <h4>Вечеря</h4>
+                                <ul>
+                                    <li>Риба з овочами на пару - 350 калорій</li>
+                                    <li>Картопляне пюре - 250 калорій</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <button class="arrow-button" id="next-day">&#8594;</button> <!-- Права стрілка -->
                 </div>
             </div>
         </section>
@@ -58,6 +206,8 @@
     <footer>
         <p>Contacts: roksolana.yadzhak.oi.2023@lpnu.ua | Phone: +380 68 636 54 27</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

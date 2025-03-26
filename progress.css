@@ -1,0 +1,84 @@
+.progress {
+    padding: 2vw;
+    text-align: center;
+}
+
+.progress-statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.stat-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 1.2vw;
+    color: #1c9999;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+    margin-top: 2vw;
+}
+
+.progress-fill {
+    background: #1c9999;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+/* Стилі для карток прогресу */
+.progress-statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Стилі для шкали прогресу */
+.training-progress {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #ff6347; /* Колір як у кнопки "Вибрати тренування" */
+    transition: width 0.5s ease-in-out;
+}

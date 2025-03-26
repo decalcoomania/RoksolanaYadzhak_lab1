@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тренування</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trainings.css">
 </head>
 
 <body>
@@ -23,34 +24,81 @@
     <main>
         <section id="trainings">
             <h2>Тренування</h2>
-            <div class="grid">
-                <div class="card cardio">
-                    <img src="cardio1.jpg" alt="Кардіо тренування">
-                    <h3>Кардіо тренування</h3>
-                    <p>Тривалість: 30 хв</p>
-                    <a href="#" class="select-button">Вибрати тренування</a>
-                </div>
-
-                <div class="card strength">
-                    <img src="gym1.jpg" alt="Силові тренування">
-                    <h3>Силові тренування</h3>
-                    <p>Тривалість: 45 хв</p>
-                    <a href="#" class="select-button">Вибрати тренування</a>
-                </div>
-
-                <div class="card stretching">
-                    <img src="zastavka.jpg" alt="Розтяжка">
-                    <h3>Зміцнення гнучкості</h3>
-                    <p>Тривалість: 20 хв</p>
-                    <a href="#" class="select-button">Вибрати тренування</a>
-                </div>
+            <div class="grid" id="training-cards">
+                <!-- Карточки тренувань будуть додаватися через JS -->
             </div>
+
+            <!-- Журнал тренувань -->
+            <section id="workout-log">
+                <h3>Журнал тренувань</h3>
+                <ul id="log-list">
+                    <!-- Список тренувань -->
+                </ul>
+            </section>
         </section>
     </main>
 
     <footer>
         <p>Contacts: roksolana.yadzhak.oi.2023@lpnu.ua | Phone: +380 68 636 54 27</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Масив тренувань
+            const trainings = [
+                { type: "Кардіо", duration: "30 хв", image: "cardio1.jpg" },
+                { type: "Силові", duration: "45 хв", image: "gym1.jpg" },
+                { type: "Розтяжка", duration: "20 хв", image: "zastavka.jpg" }
+            ];
+
+            const trainingCardsContainer = document.getElementById("training-cards");
+            const logList = document.getElementById("log-list");
+
+            // Функція для додавання картки тренування
+            function addTrainingCard(training, index) {
+                const card = document.createElement("div");
+                card.classList.add("card");
+
+                card.innerHTML = `
+                    <img src="${training.image}" alt="${training.type} тренування">
+                    <h3>${training.type} тренування</h3>
+                    <p>Тривалість: ${training.duration}</p>
+                    <button class="start-button" data-index="${index}">Почати тренування</button>
+                `;
+
+                trainingCardsContainer.appendChild(card);
+            }
+
+            // Додаємо картки тренувань
+            for (let i = 0; i < trainings.length; i++) {
+                addTrainingCard(trainings[i], i);
+            }
+
+            // Масив для журналу тренувань
+            const workoutLog = [];
+
+            // Обробник для кнопки "Почати тренування"
+            trainingCardsContainer.addEventListener("click", function (event) {
+                if (event.target.classList.contains("start-button")) {
+                    const index = event.target.getAttribute("data-index");
+                    const training = trainings[index];
+                    
+                    // Додаємо тренування до журналу
+                    const logEntry = `${training.type} тренування, тривалість: ${training.duration}`;
+                    workoutLog.push(logEntry);
+
+                    // Оновлюємо журнал
+                    const logItem = document.createElement("li");
+                    logItem.textContent = logEntry;
+                    logList.appendChild(logItem);
+
+                    // Оновлюємо статус кнопки
+                    event.target.textContent = "Тренування завершено";
+                    event.target.disabled = true; // Відключаємо кнопку після завершення тренування
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

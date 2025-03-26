@@ -1,0 +1,100 @@
+/* Блоки раціону */
+.nutrition {
+    padding: 2vw;
+    text-align: center;
+}
+
+.meal-planner {
+    margin-top: 2vw;
+}
+
+.meal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.arrow-button {
+    background-color: #aaa;
+    border: none;
+    color: white;
+    font-size: 2.5vw;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 40px;
+}
+
+.arrow-button:hover {
+    background-color: #888;
+}
+
+.arrow-button:focus {
+    outline: none;
+}
+
+.arrow-button:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+#prev-day:before {
+    transform: rotate(-135deg); /* Ліва стрілка */
+}
+
+#next-day:before {
+    transform: rotate(45deg); /* Права стрілка */
+}
+
+/* Оновлені стилі для приховування днів */
+.meal-days {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.meal-day {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.meal-day.active {
+    display: block;
+}
+
+
+.meal {
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal h4 {
+    font-size: 1.5vw;
+    color: #1c9999;
+}
+
+.meal ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto; /* Додаємо прокручування */
+}
+
+.meal ul li {
+    font-size: 1.2vw;
+    padding: 5px 0;
+}

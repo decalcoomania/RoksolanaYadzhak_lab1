@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій профіль</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Лого" class="logo">
+            <nav>
+                <a href="index.html">Головна</a>
+                <a href="trainings.html">Тренування</a>
+                <a href="progress.html">Мій прогрес</a>
+                <a href="nutrition.html">Раціон</a>
+                <div class="profile-menu">
+                    <button id="profile-button" class="nav-button">Мій профіль ▼</button>
+                    <div class="dropdown-content" id="profile-dropdown">
+                        <a href="profile.html">Переглянути профіль</a>
+                        <a href="javascript:void(0)" onclick="logout()">Вийти</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="profile">
+        <h1>Мій профіль</h1>
+        <div class="profile-container">
+            <img src="default-avatar.png" id="profile-pic" alt="Фото профілю">
+            <input type="file" id="profile-pic-upload" accept="image/*">
+            <div class="profile-info">
+                <p><strong>Ім'я:</strong> Користувач</p>
+                <p><strong>Email:</strong> user@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            alert("Ви вийшли з акаунту");
+            localStorage.removeItem("loggedIn");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
